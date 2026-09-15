@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #101413;
+    color: #e0e3e1;
+  }
+  body {
+    overscroll-behavior: none;
+    min-height: max(884px, 100dvh);
+  }
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom bioluminescent glow helper classes */
+.glow-primary {
+  box-shadow: 0 0 20px -2px rgba(163, 230, 53, 0.25);
+}
+
+.glow-secondary {
+  box-shadow: 0 0 16px -2px rgba(52, 211, 153, 0.3);
+}
+
+.glow-amber {
+  box-shadow: 0 0 16px -2px rgba(245, 158, 11, 0.3);
+}

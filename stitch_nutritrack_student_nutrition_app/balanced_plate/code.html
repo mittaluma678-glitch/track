@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-surface-variant": "#c2cab0", "primary-fixed-dim": "#98da27", "secondary": "#45dfa4", "on-primary-fixed-variant": "#334f00", "surface-container": "#1c201f", "on-error-container": "#ffdad6", "error-container": "#93000a", "on-tertiary-fixed-variant": "#653e00", "on-tertiary": "#472a00", "on-primary-fixed": "#121f00", "on-tertiary-fixed": "#2a1700", "primary-container": "#a3e635", "tertiary-fixed": "#ffddb8", "outline-variant": "#424936", "on-error": "#690005", "secondary-fixed": "#68fcbf", "on-secondary": "#003825", "tertiary-fixed-dim": "#ffb95f", "surface-container-lowest": "#0b0f0e", "inverse-primary": "#446900", "surface-container-low": "#181c1b", "tertiary": "#ffecd9", "surface-dim": "#101413", "on-primary": "#213600", "secondary-container": "#00bd85", "secondary-fixed-dim": "#45dfa4", "surface-bright": "#363a39", "surface-tint": "#98da27", "on-background": "#e0e3e1", "surface": "#101413", "on-secondary-fixed-variant": "#005137", "on-secondary-container": "#00452e", "on-surface": "#e0e3e1", "on-primary-container": "#416400", "surface-container-high": "#272b2a", "tertiary-container": "#ffc989", "error": "#ffb4ab", "on-tertiary-container": "#805000", "inverse-surface": "#e0e3e1", "on-secondary-fixed": "#002114", "outline": "#8c947c", "primary-fixed": "#b2f746", "surface-variant": "#323634", "inverse-on-surface": "#2d3130", "background": "#101413", "surface-container-highest": "#323634", "primary": "#ccff80" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin": "1rem", "margin-desktop": "3rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "margin-tablet": "2rem", "gutter": "1.25rem", "gutter-desktop": "1.75rem", "space-lg": "1.5rem", "space-md": "1rem", "space-xl": "2.5rem" }, fontFamily: { "headline-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "display-lg-mobile": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "display-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "title-sm": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"] }, fontSize: { "headline-lg": ["2rem", { "lineHeight": "2.5rem", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["0.875rem", { "lineHeight": "1.4rem", "fontWeight": "400" }], "display-lg-mobile": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-lg-mobile": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-md": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-lg": ["3rem", { "lineHeight": "3.5rem", "letterSpacing": "-0.03em", "fontWeight": "800" }], "label-sm": ["0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.06em", "fontWeight": "700" }], "body-lg": ["1rem", { "lineHeight": "1.6rem", "fontWeight": "400" }], "title-sm": ["1.125rem", { "lineHeight": "1.5rem", "fontWeight": "600" }], "label-md": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.04em", "fontWeight": "600" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#101413;color:#e0e3e1;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen relative selection:bg-primary-container selection:text-on-primary-container"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_12px_rgba(0,0,0,0.35)]"><div class="h-16 px-space-md flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><button aria-label="Open menu" class="w-11 h-11 flex items-center justify-center rounded-xl text-on-surface hover:text-primary transition-colors" onclick="document.getElementById('mobile-drawer').classList.remove('-translate-x-full');document.getElementById('drawer-backdrop').classList.remove('opacity-0','pointer-events-none');" type="button"><span class="material-symbols-outlined text-[24px]">menu</span></button><div class="flex items-center gap-space-xs"><img alt="NutriTrack Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UyH_6U34JRTtQBiyPjFDX4cYKNaGOjX1bzRJBSwV_BIRLXFY13roMah7dG9mkNgiRcF4vAaxptYaHlO381wUqi3a7Q6pCE52zWH2w_r0zdMj_kxPrw_dHnIlKsbHvKJ39EYdJzyyaHtiOXAqQP4bu_k1A8XRhRJGhY_jmfJozJkbOQRR0gzZ21ul6iOhX6_CoolLLHf3vjraCcx6W8tvBWsVwGtYf16ViovotIpGgE4XVl_WZ8SFJCqpOC"/><div class="flex flex-col truncate"><span class="font-title-sm text-title-sm font-bold tracking-tight text-on-surface leading-none truncate">NutriTrack</span><span class="font-label-sm text-label-sm text-on-surface-variant/80 tracking-normal hidden min-[380px]:inline truncate">Track Habits. Understand Nutrition</span></div></div></div><div class="flex items-center gap-space-xs"><span class="font-title-sm text-title-sm font-semibold text-primary hidden min-[480px]:inline px-space-xs truncate">Plate</span><button aria-label="Search" class="w-11 h-11 flex items-center justify-center rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/40 transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/40 transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2 right-2 min-w-[16px] h-4 px-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold ring-2 ring-surface">1</span></button><div class="w-11 h-11 flex items-center justify-center pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container/40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArdnuFkBFqagN_BtESl7-OpEn9tE8wvDJ6W3CYB1mNXx5WmJ5g7lUzB4g9uLNOl4uvR8fGmwXIT2b9UJ1gd5tUd6CwyO_Y7jjvjhHAUQNySzv-7d7MEiFbhVVIQe_bj3hIvM_Fl9Ec4oE7ErQYivMCGA414x3Z1M02z8Fw-FmR3SFKmf18Hnsz-wiwyUzwCG5hTbrmHxBabxtLn0DLUFlsCSwhgYCYyT9f3Iqk8NLVyh5iY4itmg_V-g"/></div></div></div></header><div class="fixed inset-0 z-50 bg-surface-container-lowest/80 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300" id="drawer-backdrop" onclick="document.getElementById('mobile-drawer').classList.add('-translate-x-full');this.classList.add('opacity-0','pointer-events-none');"></div><aside class="fixed top-0 left-0 bottom-0 z-50 w-72 max-w-[80vw] bg-surface-container-low shadow-[0_8px_32px_rgba(0,0,0,0.6)] transform -translate-x-full transition-transform duration-300 ease-out flex flex-col pt-safe pb-safe" id="mobile-drawer"><div class="h-16 px-space-md flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="NutriTrack Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UyH_6U34JRTtQBiyPjFDX4cYKNaGOjX1bzRJBSwV_BIRLXFY13roMah7dG9mkNgiRcF4vAaxptYaHlO381wUqi3a7Q6pCE52zWH2w_r0zdMj_kxPrw_dHnIlKsbHvKJ39EYdJzyyaHtiOXAqQP4bu_k1A8XRhRJGhY_jmfJozJkbOQRR0gzZ21ul6iOhX6_CoolLLHf3vjraCcx6W8tvBWsVwGtYf16ViovotIpGgE4XVl_WZ8SFJCqpOC"/><span class="font-title-sm text-title-sm font-bold text-on-surface">NutriTrack</span></div><button class="w-11 h-11 flex items-center justify-center rounded-xl text-on-surface-variant hover:text-on-surface" onclick="document.getElementById('mobile-drawer').classList.add('-translate-x-full');document.getElementById('drawer-backdrop').classList.add('opacity-0','pointer-events-none');" type="button"><span class="material-symbols-outlined text-[22px]">close</span></button></div><div class="px-space-md py-space-sm"><span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold">Secondary Destinations</span></div><div class="flex-1 overflow-y-auto px-space-sm space-y-1"><a class="flex items-center gap-space-md px-space-md h-12 rounded-xl text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" data-path="nutrition-library" href="#"><span class="material-symbols-outlined text-[22px] text-secondary">menu_book</span><span class="font-body-md text-body-md font-semibold">Nutrition Library</span></a><a class="flex items-center gap-space-md px-space-md h-12 rounded-xl text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" data-path="quiz" href="#"><span class="material-symbols-outlined text-[22px] text-tertiary-container">quiz</span><span class="font-body-md text-body-md font-semibold">Quiz</span></a><a class="flex items-center gap-space-md px-space-md h-12 rounded-xl text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" data-path="myth-vs-fact" href="#"><span class="material-symbols-outlined text-[22px] text-primary">lightbulb</span><span class="font-body-md text-body-md font-semibold">Myth vs Fact</span></a><a class="flex items-center gap-space-md px-space-md h-12 rounded-xl text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" data-path="achievements" href="#"><span class="material-symbols-outlined text-[22px] text-tertiary-fixed-dim">emoji_events</span><span class="font-body-md text-body-md font-semibold">Achievements</span></a><a class="flex items-center gap-space-md px-space-md h-12 rounded-xl text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[22px] text-outline">settings</span><span class="font-body-md text-body-md font-semibold">Settings</span></a></div><div class="p-space-md bg-surface-container-lowest/60 m-space-sm rounded-xl"><span class="font-label-sm text-label-sm text-on-surface-variant block">Collegiate Wellness</span><span class="font-label-md text-label-md text-primary font-bold block">Budget &amp; Schedule Friendly</span></div></aside><main class="flex-1 w-full bg-surface pt-16 pb-24 px-space-margin"><div class="flex flex-col w-full space-y-space-md">
+<!-- Concept Intro Card -->
+<div class="relative overflow-hidden bg-surface-container-low rounded-xl p-space-md shadow-xl">
+<div class="absolute -right-12 -top-12 w-40 h-40 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">restaurant</span>
+</span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-primary font-bold">Intuitive Nutrition</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface tracking-tight">The Balanced Plate Method</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">A simple visual guideline for everyday student meals — no calorie counting anxiety needed.</p>
+</div>
+<!-- Interactive Graphic Section -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-lg flex flex-col items-center">
+<div class="flex items-center justify-between w-full mb-space-sm">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold block">Interactive Map</span>
+<span class="font-title-sm text-title-sm font-semibold text-on-surface">Tap any zone to focus</span>
+</div>
+<button class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-colors flex items-center gap-1" id="reset-plate-btn" type="button">
+<span class="material-symbols-outlined text-[14px]">refresh</span> Reset
+      </button>
+</div>
+<!-- Plate Graphic & Satellites -->
+<div class="relative w-full max-w-[310px] aspect-square flex items-center justify-center my-2">
+<!-- Ambient Glow Behind Plate -->
+<div class="absolute inset-4 rounded-full bg-primary-container/15 blur-2xl transition-all duration-500" id="plate-glow"></div>
+<!-- Main Dish SVG -->
+<svg class="w-full h-full transform -rotate-45 drop-shadow-2xl" viewbox="0 0 320 320">
+<defs>
+<radialgradient cx="50%" cy="50%" id="rim-gradient" r="50%">
+<stop offset="85%" stop-color="#1c201f"></stop>
+<stop offset="97%" stop-color="#272b2a"></stop>
+<stop offset="100%" stop-color="#323634"></stop>
+</radialgradient>
+<filter height="140%" id="glow-filter" width="140%" x="-20%" y="-20%">
+<fedropshadow dx="0" dy="0" flood-color="#a3e635" flood-opacity="0.3" stddeviation="4"></fedropshadow>
+</filter>
+</defs>
+<!-- Outer Plate Base Rim -->
+<circle cx="160" cy="160" fill="url(#rim-gradient)" r="148"></circle>
+<circle cx="160" cy="160" fill="#0b0f0e" r="132"></circle>
+<!-- Slice 1: 1/2 Veggies & Fruits (Angles: 0 to 180 deg) -->
+<path class="cursor-pointer transition-transform duration-300 origin-center hover:opacity-95" d="M 160 160 L 290 160 A 130 130 0 0 1 30 160 Z" fill="#45dfa4" id="wedge-veggies" opacity="0.92"></path>
+<!-- Slice 2: 1/4 Protein-Rich Foods (Angles: 180 to 270 deg) -->
+<path class="cursor-pointer transition-transform duration-300 origin-center hover:opacity-95" d="M 160 160 L 30 160 A 130 130 0 0 1 160 30 Z" fill="#00bd85" id="wedge-protein" opacity="0.88"></path>
+<!-- Slice 3: 1/4 Whole Grains & Sustained Carbs (Angles: 270 to 360 deg) -->
+<path class="cursor-pointer transition-transform duration-300 origin-center hover:opacity-95" d="M 160 160 L 160 30 A 130 130 0 0 1 290 160 Z" fill="#ffc989" id="wedge-carbs" opacity="0.9"></path>
+<!-- Inner Plate Core Separator Ring -->
+<circle cx="160" cy="160" fill="none" r="130" stroke="#101413" stroke-width="4"></circle>
+<!-- Center Hub -->
+<circle cx="160" cy="160" fill="#101413" r="28"></circle>
+<circle cx="160" cy="160" fill="#1c201f" r="24"></circle>
+</svg>
+<!-- Center Icon & Prompt -->
+<div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none text-center">
+<span class="material-symbols-outlined text-primary text-[24px]">local_dining</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant/80 font-bold">BALANCED</span>
+</div>
+<!-- Zone Overlay Tags (rotated upright) -->
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 pointer-events-none text-center">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest/90 font-label-sm text-label-sm text-secondary-fixed font-bold shadow-md">
+          ½ Veggies &amp; Greens
+        </span>
+</div>
+<div class="absolute top-8 left-3 pointer-events-none text-center">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest/90 font-label-sm text-label-sm text-secondary-fixed font-bold shadow-md">
+          ¼ Protein
+        </span>
+</div>
+<div class="absolute top-8 right-3 pointer-events-none text-center">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-lowest/90 font-label-sm text-label-sm text-tertiary-container font-bold shadow-md">
+          ¼ Carbs
+        </span>
+</div>
+</div>
+<!-- Floating Essential Rings -->
+<div class="grid grid-cols-2 gap-space-sm w-full mt-space-sm">
+<button class="flex items-center gap-space-xs p-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all text-left" id="btn-ring-water" type="button">
+<div class="w-9 h-9 rounded-full bg-secondary/15 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[20px]">water_drop</span>
+</div>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-secondary font-bold block truncate">Hydration Ring</span>
+<span class="font-body-md text-body-md text-on-surface truncate block">Water + Lime Slice</span>
+</div>
+</button>
+<button class="flex items-center gap-space-xs p-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high transition-all text-left" id="btn-ring-fats" type="button">
+<div class="w-9 h-9 rounded-full bg-tertiary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary-container text-[20px]">spa</span>
+</div>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-tertiary-container font-bold block truncate">Healthy Fats</span>
+<span class="font-body-md text-body-md text-on-surface truncate block">Nuts, Seeds, Oils</span>
+</div>
+</button>
+</div>
+</div>
+<!-- Dynamic Active Zone Detail Inspector -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-md transition-all duration-300" id="zone-inspector">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary" id="zone-badge-dot"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary font-bold" id="zone-subtitle">50% OF THE PLATE</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Nutrient Target</span>
+</div>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface" id="zone-title">½ Vegetables &amp; Fruits</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1" id="zone-desc">
+      Rich in essential dietary fiber, micronutrients, phytonutrients, and natural cellular hydration to prevent late-afternoon study slumps.
+    </p>
+<!-- Cultural Student Examples Carousel / Grid -->
+<div class="mt-space-sm pt-space-sm bg-surface-container/60 rounded-lg p-space-sm">
+<span class="font-label-sm text-label-sm uppercase text-outline font-bold block mb-1.5">Hostel &amp; Budget Friendly Examples</span>
+<div class="flex flex-wrap gap-1.5" id="zone-tags">
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-body-md text-body-md">Palak / Spinach</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-body-md text-body-md">Crisp Cucumbers</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-body-md text-body-md">Carrots &amp; Cabbage</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-body-md text-body-md">Bhindi (Okra)</span>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-body-md text-body-md">Seasonal Papaya &amp; Banana</span>
+</div>
+</div>
+</div>
+<!-- Interactive Food Section Explanations (Accordion / Tap List) -->
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold">The 4 Core Pillars</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">Culturally Diverse</span>
+</div>
+<!-- Veggies Tab -->
+<button class="w-full text-left bg-surface-container-low hover:bg-surface-container p-space-md rounded-xl transition-all shadow-sm flex items-start justify-between gap-space-sm group" onclick="selectZone('veggies')" type="button">
+<div class="flex gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-secondary/15 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-secondary text-[22px]">eco</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-title-sm text-title-sm font-bold text-on-surface group-hover:text-primary transition-colors">½ Vegetables &amp; Fruits</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary/20 text-secondary font-label-sm text-label-sm font-bold">Fiber Boost</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Cabbage stir-fry, cucumbers, bhindi, tomatoes, carrots, citrus fruits.</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary text-[20px] transition-colors">chevron_right</span>
+</button>
+<!-- Protein Tab -->
+<button class="w-full text-left bg-surface-container-low hover:bg-surface-container p-space-md rounded-xl transition-all shadow-sm flex items-start justify-between gap-space-sm group" onclick="selectZone('protein')" type="button">
+<div class="flex gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-secondary-container/20 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-secondary-container text-[22px]">fitness_center</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-title-sm text-title-sm font-bold text-on-surface group-hover:text-primary transition-colors">¼ Protein Power</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container/20 text-secondary-fixed font-label-sm text-label-sm font-bold">Muscle &amp; Brain</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Dal tadka, rajma, chana, boiled eggs, grilled paneer, soya chunks.</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary text-[20px] transition-colors">chevron_right</span>
+</button>
+<!-- Carbs Tab -->
+<button class="w-full text-left bg-surface-container-low hover:bg-surface-container p-space-md rounded-xl transition-all shadow-sm flex items-start justify-between gap-space-sm group" onclick="selectZone('carbs')" type="button">
+<div class="flex gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-tertiary-container/20 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-tertiary-container text-[22px]">grain</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-title-sm text-title-sm font-bold text-on-surface group-hover:text-primary transition-colors">¼ Sustained Carbs</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-container/20 text-tertiary-container font-label-sm text-label-sm font-bold">Steady Glucose</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Whole-wheat rotis, red or brown rice, millets, poha, sweet potatoes.</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary text-[20px] transition-colors">chevron_right</span>
+</button>
+<!-- Fats Tab -->
+<button class="w-full text-left bg-surface-container-low hover:bg-surface-container p-space-md rounded-xl transition-all shadow-sm flex items-start justify-between gap-space-sm group" onclick="selectZone('fats')" type="button">
+<div class="flex gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-primary-container/20 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-primary-container text-[22px]">water</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-title-sm text-title-sm font-bold text-on-surface group-hover:text-primary transition-colors">Healthy Fats &amp; Micro-Shields</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-container/20 text-primary-container font-label-sm text-label-sm font-bold">Hormone Health</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Handful of roasted peanuts, flaxseed sprinkle, mustard or olive oil, desi ghee.</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-primary text-[20px] transition-colors">chevron_right</span>
+</button>
+</div>
+<!-- "Build Your Plate" Interactive Student Simulator -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-xl space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">tune</span>
+<h2 class="font-title-sm text-title-sm font-bold text-on-surface">Build Your Plate Simulator</h2>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary/10 text-primary font-label-sm text-label-sm font-bold">Interactive</span>
+</div>
+<!-- Simulator Slots -->
+<div class="space-y-space-xs">
+<!-- Slot 1: Veggies -->
+<div class="p-space-sm rounded-xl bg-surface-container flex flex-col gap-1.5">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> Slot 1: ½ Vegetables
+          </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">50% Area</span>
+</div>
+<div class="grid grid-cols-2 gap-1.5">
+<button class="sim-btn sim-veg-btn p-2 rounded-lg bg-surface-container-high text-left font-body-md text-body-md text-on-surface hover:bg-secondary/20 transition-all active:scale-95" data-val="Sauteed Spinach &amp; Bell Peppers" onclick="updateSimulator('veg', 'Sauteed Spinach &amp; Bell Peppers')" type="button">
+            🌿 Sauteed Spinach
+          </button>
+<button class="sim-btn sim-veg-btn p-2 rounded-lg bg-surface-container-high text-left font-body-md text-body-md text-on-surface hover:bg-secondary/20 transition-all active:scale-95" data-val="Cabbage &amp; Crunchy Cucumbers" onclick="updateSimulator('veg', 'Cabbage &amp; Crunchy Cucumbers')" type="button">
+            🥗 Cabbage &amp; Salad
+          </button>
+</div>
+</div>
+<!-- Slot 2: Protein -->
+<div class="p-space-sm rounded-xl bg-surface-container flex flex-col gap-1.5">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-secondary-fixed font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed"></span> Slot 2: ¼ Protein
+          </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">25% Area</span>
+</div>
+<div class="grid grid-cols-2 gap-1.5">
+<button class="sim-btn sim-pro-btn p-2 rounded-lg bg-surface-container-high text-left font-body-md text-body-md text-on-surface hover:bg-secondary-container/30 transition-all active:scale-95" data-val="Spiced Soya Chunks" onclick="updateSimulator('pro', 'Spiced Soya Chunks')" type="button">
+            🌱 Spiced Soya
+          </button>
+<button class="sim-btn sim-pro-btn p-2 rounded-lg bg-surface-container-high text-left font-body-md text-body-md text-on-surface hover:bg-secondary-container/30 transition-all active:scale-95" data-val="Home-Style Dal Tadka" onclick="updateSimulator('pro', 'Home-Style Dal Tadka')" type="button">
+            🍲 Thick Dal Tadka
+          </button>
+</div>
+</div>
+<!-- Slot 3: Carbs -->
+<div class="p-space-sm rounded-xl bg-surface-container flex flex-col gap-1.5">
+<div class="flex justify-between items-center">
+<span class="font-label-sm text-label-sm text-tertiary-container font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span> Slot 3: ¼ Grains
+          </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">25% Area</span>
+</div>
+<div class="grid grid-cols-2 gap-1.5">
+<button class="sim-btn sim-carb-btn p-2 rounded-lg bg-surface-container-high text-left font-body-md text-body-md text-on-surface hover:bg-tertiary-container/30 transition-all active:scale-95" data-val="Brown Jeera Rice" onclick="updateSimulator('carb', 'Brown Jeera Rice')" type="button">
+            🍚 Brown Jeera Rice
+          </button>
+<button class="sim-btn sim-carb-btn p-2 rounded-lg bg-surface-container-high text-left font-body-md text-body-md text-on-surface hover:bg-tertiary-container/30 transition-all active:scale-95" data-val="2 Multigrain Rotis" onclick="updateSimulator('carb', '2 Multigrain Rotis')" type="button">
+            🫓 2 Warm Rotis
+          </button>
+</div>
+</div>
+</div>
+<!-- Live Assembled Plate Card -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wide text-outline font-bold">Your Assembled Plate</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-primary-container text-on-primary-container font-bold">Balanced</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary shrink-0"></span>
+<span class="font-body-md text-body-md text-on-surface font-semibold truncate" id="sim-selected-veg">Sauteed Spinach &amp; Bell Peppers</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed shrink-0"></span>
+<span class="font-body-md text-body-md text-on-surface font-semibold truncate" id="sim-selected-pro">Spiced Soya Chunks</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-tertiary-container shrink-0"></span>
+<span class="font-body-md text-body-md text-on-surface font-semibold truncate" id="sim-selected-carb">Brown Jeera Rice</span>
+</div>
+</div>
+<!-- Plate Balance Score Pill -->
+<div class="mt-2 p-2.5 rounded-xl bg-primary-container/10 flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5">verified</span>
+<div>
+<span class="font-label-md text-label-md text-primary font-bold block">🌟 Optimal 100% Student Plate Balance!</span>
+<span class="font-body-md text-body-md text-on-surface-variant block mt-0.5">High fiber ensures gradual digestion, stopping afternoon caffeine crashes.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Student Pro-Tip Banner -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-md flex items-start gap-space-sm relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 bg-primary-container/10 rounded-full blur-xl pointer-events-none"></div>
+<div class="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center shrink-0 text-primary">
+<span class="material-symbols-outlined text-[24px]">school</span>
+</div>
+<div class="flex-1 min-w-0">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold block mb-0.5">Campus Hack</span>
+<p class="font-body-md text-body-md text-on-surface leading-snug">
+<strong class="text-on-surface font-bold">🎓 Budget Tip:</strong> Frozen veggies and canned lentils provide the exact same micronutrients as fresh, at half the price for hostel/dorm cooking!
+      </p>
+</div>
+</div>
+<!-- Visual Collage: Real-World Student Meal Inspirations -->
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between px-1">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-outline font-bold">Photo Inspiration</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">Hostel Approved</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Meal 1 -->
+<div class="relative rounded-xl overflow-hidden bg-surface-container-low aspect-[4/3] shadow-md group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A balanced nutritious student hostel meal presented on a dark plate, showing half portion fresh chopped cucumber and tomato salad, a quarter portion of spiced yellow dal lentils, and a quarter portion brown rice with a small bowl of roasted peanuts, photographed from above in moody warm dorm lighting with natural shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXryke_bstEXfyUmymXmg8OiG8eXzzr82lUisDnYbjVxGodF7_EtipTeHWWXyv0Bs18vnC8_tQlxIySgXvnoy22qiAye5tuHD0dRR0QydE3cRTDJng_9WZhQvXpmWAVUH7Tpa0bQSR83vgN5NpS0o0Po2vsss0szzIQLOpkQkPzl44Z44kA4oZUdlQifAtiqRxeS0vhlL1Aezxwm_BbE69pY8-YdeUTDsdXimga4FdrHE4zSoXShjt5A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-surface-container-lowest/30 to-transparent p-2 flex flex-col justify-end">
+<span class="font-label-sm text-label-sm text-secondary font-bold">Quick 15-Min Prep</span>
+<span class="font-title-sm text-title-sm text-on-surface font-bold leading-tight">Dal &amp; Crunchy Salad</span>
+</div>
+</div>
+<!-- Meal 2 -->
+<div class="relative rounded-xl overflow-hidden bg-surface-container-low aspect-[4/3] shadow-md group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A wholesome student balanced plate featuring vibrant green stir-fried spinach and bell peppers occupying half the round plate, scrambled boiled eggs with cumin occupying a quarter, and two toasted wholewheat rotis on the remaining quarter, garnished with sesame seeds, captured in cinematic modern dark wellness kitchen lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSm-UjB0kniFjVap8cYqH6ZVtp282QvXp--UtajOXUa2yw-8_LlP7Iz-vuOkIe8XwnTjsgk8nhiA_9dZuw_JX38DeYXePIMu9ow4qTESrWgjR-labzJxPezBWEy2cn32LbRBks58CmFwYGmQPozU5zfD2Ue8YWk0pRDI22q9SZEuQD2SQ1X6yTxUaAlZTpuwMKcWJWC87l1evV_zN3Nd8SkP5a3l0Jn53T0fcz3owr3HkFfxKJlGU-bg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/90 via-surface-container-lowest/30 to-transparent p-2 flex flex-col justify-end">
+<span class="font-label-sm text-label-sm text-primary font-bold">Protein Boost</span>
+<span class="font-title-sm text-title-sm text-on-surface font-bold leading-tight">Palak &amp; Spiced Egg</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Zone Data Definitions
+  const zoneData = {
+    veggies: {
+      title: "½ Vegetables & Fruits",
+      subtitle: "50% OF THE PLATE",
+      colorClass: "bg-secondary",
+      textColorClass: "text-secondary",
+      desc: "Rich in essential dietary fiber, micronutrients, phytonutrients, and natural cellular hydration to prevent late-afternoon study slumps.",
+      tags: ["Palak / Spinach", "Crisp Cucumbers", "Carrots & Cabbage", "Bhindi (Okra)", "Seasonal Papaya & Banana"],
+      glowColor: "rgba(69, 223, 164, 0.25)"
+    },
+    protein: {
+      title: "¼ Protein-Rich Foods",
+      subtitle: "25% OF THE PLATE",
+      colorClass: "bg-secondary-container",
+      textColorClass: "text-secondary-fixed",
+      desc: "Sustains lean muscle maintenance, promotes satiety, and balances blood glucose to maintain intense mental focus during long study blocks.",
+      tags: ["Yellow Dal Tadka", "Rajma & Chana", "Soya Chunks", "Boiled / Scrambled Eggs", "Low-Fat Paneer / Tofu"],
+      glowColor: "rgba(0, 189, 133, 0.25)"
+    },
+    carbs: {
+      title: "¼ Whole Grains & Sustained Carbs",
+      subtitle: "25% OF THE PLATE",
+      colorClass: "bg-tertiary-container",
+      textColorClass: "text-tertiary-container",
+      desc: "Complex starches breakdown steadily into glucose, avoiding sudden energy spikes and subsequent lethargy often triggered by refined carbs.",
+      tags: ["Wholewheat Chapatis", "Steamed Brown Rice", "Finger Millet (Ragi)", "Poha with Peas", "Roasted Sweet Potato"],
+      glowColor: "rgba(255, 201, 137, 0.25)"
+    },
+    water: {
+      title: "💧 Water & Hydration",
+      subtitle: "CELLULAR PERFORMANCE",
+      colorClass: "bg-secondary",
+      textColorClass: "text-secondary",
+      desc: "Mild dehydration reduces cognitive focus by 15%. Keep an insulated water bottle with lime or mint on your dorm desk throughout classes.",
+      tags: ["Filtered Dorm Water", "Lime & Mint Infusion", "Unsweetened Coconut Water", "Herbal Green Tea"],
+      glowColor: "rgba(69, 223, 164, 0.3)"
+    },
+    fats: {
+      title: "🥑 Essential Healthy Fats",
+      subtitle: "MICRO-SHIELD EXTRA",
+      colorClass: "bg-primary-container",
+      textColorClass: "text-primary-container",
+      desc: "Supports hormone balance, vitamin absorption (A, D, E, K), and sustained neurological health. Measure in thumb-sized portions.",
+      tags: ["Roasted Peanuts", "Chia & Flax Seeds", "Light Desi Ghee", "Mustard / Olive Oil"],
+      glowColor: "rgba(163, 230, 53, 0.25)"
+    }
+  };
+
+  // Select Zone Function
+  function selectZone(zoneKey) {
+    const data = zoneData[zoneKey];
+    if (!data) return;
+
+    const titleEl = document.getElementById('zone-title');
+    const subtitleEl = document.getElementById('zone-subtitle');
+    const descEl = document.getElementById('zone-desc');
+    const dotEl = document.getElementById('zone-badge-dot');
+    const tagsContainer = document.getElementById('zone-tags');
+    const glowEl = document.getElementById('plate-glow');
+    const inspectorEl = document.getElementById('zone-inspector');
+
+    // Smooth update
+    inspectorEl.classList.add('opacity-70');
+    setTimeout(() => {
+      titleEl.innerText = data.title;
+      subtitleEl.innerText = data.subtitle;
+      subtitleEl.className = "font-label-sm text-label-sm uppercase tracking-wider font-bold " + data.textColorClass;
+      dotEl.className = "w-3 h-3 rounded-full " + data.colorClass;
+      descEl.innerText = data.desc;
+
+      tagsContainer.innerHTML = data.tags.map(t => 
+        `<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface font-body-md text-body-md">${t}</span>`
+      ).join('');
+
+      if (glowEl) {
+        glowEl.style.backgroundColor = data.glowColor;
+      }
+      inspectorEl.classList.remove('opacity-70');
+    }, 150);
+  }
+
+  // Bind Plate Wedges
+  document.getElementById('wedge-veggies').addEventListener('click', () => selectZone('veggies'));
+  document.getElementById('wedge-protein').addEventListener('click', () => selectZone('protein'));
+  document.getElementById('wedge-carbs').addEventListener('click', () => selectZone('carbs'));
+  document.getElementById('btn-ring-water').addEventListener('click', () => selectZone('water'));
+  document.getElementById('btn-ring-fats').addEventListener('click', () => selectZone('fats'));
+  document.getElementById('reset-plate-btn').addEventListener('click', () => selectZone('veggies'));
+
+  // Simulator Interaction
+  function updateSimulator(type, value) {
+    if (type === 'veg') {
+      document.getElementById('sim-selected-veg').innerText = value;
+      document.querySelectorAll('.sim-veg-btn').forEach(btn => {
+        btn.classList.toggle('bg-secondary/20', btn.getAttribute('data-val') === value);
+        btn.classList.toggle('text-secondary', btn.getAttribute('data-val') === value);
+      });
+    } else if (type === 'pro') {
+      document.getElementById('sim-selected-pro').innerText = value;
+      document.querySelectorAll('.sim-pro-btn').forEach(btn => {
+        btn.classList.toggle('bg-secondary-container/30', btn.getAttribute('data-val') === value);
+        btn.classList.toggle('text-secondary-fixed', btn.getAttribute('data-val') === value);
+      });
+    } else if (type === 'carb') {
+      document.getElementById('sim-selected-carb').innerText = value;
+      document.querySelectorAll('.sim-carb-btn').forEach(btn => {
+        btn.classList.toggle('bg-tertiary-container/30', btn.getAttribute('data-val') === value);
+        btn.classList.toggle('text-tertiary-container', btn.getAttribute('data-val') === value);
+      });
+    }
+  }
+
+  // Initialize Default Selection on Simulator
+  updateSimulator('veg', 'Sauteed Spinach & Bell Peppers');
+  updateSimulator('pro', 'Spiced Soya Chunks');
+  updateSimulator('carb', 'Brown Jeera Rice');
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-4px_20px_rgba(0,0,0,0.4)]" data-active-classes="text-primary font-bold scale-105"><div class="flex items-center justify-around h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-primary transition-all" data-path="home" href="#"><span class="material-symbols-outlined text-[24px]">home</span><span class="font-label-sm text-label-sm leading-tight mt-0.5">Home</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-primary transition-all" data-path="tracker" href="#"><span class="material-symbols-outlined text-[24px]">bar_chart</span><span class="font-label-sm text-label-sm leading-tight mt-0.5">Tracker</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-12 transition-all text-primary font-bold scale-105" data-path="plate" href="#"><span class="material-symbols-outlined text-[24px]">restaurant</span><span class="font-label-sm text-label-sm leading-tight mt-0.5">Plate</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-primary transition-all" data-path="nutrition" href="#"><span class="material-symbols-outlined text-[24px]">nutrition</span><span class="font-label-sm text-label-sm leading-tight mt-0.5">Nutrition</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 text-on-surface-variant hover:text-primary transition-all" data-path="student" href="#"><span class="material-symbols-outlined text-[24px]">school</span><span class="font-label-sm text-label-sm leading-tight mt-0.5">Student</span></a></div></nav></body></html>
