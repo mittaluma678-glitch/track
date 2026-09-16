@@ -35,6 +35,15 @@ app.use('/api/hydration', hydrationRouter);
 app.use('/api/habits', habitsRouter);
 app.use('/api/content', contentRouter);
 
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const distPath = path.join(__dirname, '../dist');
+
+app.use(express.static(distPath));
+
 // Health check endpoint
 app.get('/api/health', (req, res) => {
   res.json({
@@ -42,6 +51,14 @@ app.get('/api/health', (req, res) => {
     app: 'NutriTrack Express Backend',
     database: mongoose.connection.readyState === 1 ? 'connected' : 'disconnected',
     timestamp: new Date(),
+  });
+});
+
+// SPA fallback for non-API routes
+app.get('*', (req, res, next) => {
+  if (req.path.startsWith('/api')) return next();
+  res.sendFile(path.join(distPath, 'index.html'), (err) => {
+    if (err) next();
   });
 });
 
